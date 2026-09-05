@@ -1,0 +1,118 @@
+:root {
+  --color-bg: #F7F3EC;
+  --color-primary: #1F4B3F;
+  --color-raw: #B8321F;
+  --color-white: #FFF8ED;
+  --color-classic: #C9A227;
+  --color-text: #2B2420;
+  --color-text-muted: #6B5F56;
+  --color-wfh: #5C7A82;
+
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-full: 999px;
+  --shadow-soft: 0 4px 14px rgba(43, 36, 32, 0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #E7E2D8;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .logo, .select-dest-btn {
+  font-family: 'Poppins', sans-serif;
+}
+
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; }
+img { max-width: 100%; display: block; }
+
+/* app jaisa feel dene ke liye, desktop pe bhi mobile-width frame */
+.app-shell {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--color-bg);
+  position: relative;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Header ---------- */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.3px;
+}
+.logo span { color: var(--color-classic); }
+
+.profile-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,248,237,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-btn svg { width: 20px; height: 20px; }
+
+/* ---------- Bottom Nav ---------- */
+.bottom-nav {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 10px calc(10px + env(safe-area-inset-bottom));
+  margin-top: auto;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  color: rgba(255,248,237,0.75);
+  font-size: 0.68rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.nav-item svg { width: 22px; height: 22px; }
+.nav-item:active { color: var(--color-white); }
+
+.nav-center {
+  transform: translateY(-16px);
+  color: var(--color-white);
+}
+.nav-center-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-raw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(184,50,31,0.45);
+  margin-bottom: 2px;
+}
+.nav-center-circle svg { width: 24px; height: 24px; color: var(--color-white); }
